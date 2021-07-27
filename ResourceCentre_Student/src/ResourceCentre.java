@@ -210,7 +210,7 @@ public class ResourceCentre {
 		}
 		return isLoaned;
 	}
-	public static void loanCamcorder(ArrayList<Camcorder> camcorderList) {
+	public static void loanCamcorder(ArrayList<Camcorder> camcorderList) { //Gerald
 		ResourceCentre.viewAllCamcorder(camcorderList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
@@ -249,7 +249,7 @@ public class ResourceCentre {
 		} else {
 			System.out.println("Chromebook: " + tag + " loaned out");
 		}
-	}
+	} //Gerald
 	
 	//================================= Option 4 Return an item (CRUD - Update)=================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
