@@ -143,7 +143,7 @@ public class ResourceCentre {
 		System.out.println(output);
 	}
 
-	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
+	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) { //Eugene
 		String output = "";
 		for (int i = 0; i < chromebookList.size(); i ++) {
 			
@@ -159,32 +159,37 @@ public class ResourceCentre {
 		String output = String.format("%-10s %-30s %-20s\n", "ASSET TAG", "DESCRIPTION", "OPERATING SYSTEM");
 		output += retrieveAllChromebook(chromebookList);
 		System.out.println(output);
-	}
+	} //Eugene
 
 	//================================= Option 2 Add an item (CRUD - Create) =================================
 	public static Camcorder inputCamcorder() {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		int zoom = Helper.readInt("Enter optical zoom > ");
+		
 
 		Camcorder cc= new Camcorder(tag, description, zoom);
 		return cc;
 		
 	}
-	public static void addCamcorder(ArrayList<Camcorder> camcorderList, Camcorder cc) {
+	public static void addCamcorder(ArrayList<Camcorder> camcorderList, Camcorder cc) { //Pranum
 		
 		camcorderList.add(cc);
 		System.out.println("Camcorder added");
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
-		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description >");
+		String os = Helper.readString("Enter operating system > ");
+		
+		Chromebook cb = new Chromebook(tag, description, os); 
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-		// write your code here
+		chromebookList.add(cb);
+		System.out.println("Chromebook added"); //Pranum
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
